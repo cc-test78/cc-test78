@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+    <head>
+        <title> Test iOS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            a, button {
+                display: inline-block;
+                padding: 8px 16px;
+                border: 0;
+                background-color: #2980b9;
+                color: #ffffff;
+
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 1.5;
+                font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+                text-decoration: none;
+            }
+            .row {
+                margin-top: 16px;
+                margin-bottom: 16px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="row">
+            <a href="sms://+18885555512?body=I%27m%20interested%20in%20your%20product.%20Please%20contact%20me.">Send SMS #1</a>
+        </div>
+        <div class="row">
+            <button id="button2">Send SMS #2</button>
+        </div>
+        <div class="row">
+            <button id="button3">Send SMS #3</button>
+        </div>
+        <div class="row">
+            <button id="button4">Send SMS #4</button>
+        </div>
+
+        <div class="row">
+            <button id="button5">Send SMS #5</button>
+        </div>
+
+        <div class="row">
+            <button id="button6">Send SMS #6</button>
+        </div>
+
+        <script>
+
+            var button2 = document.getElementById('button2');
+            button2.addEventListener('click', function() {
+                window.location.href = 'sms://+18885555512';
+            });
+
+            var button3 = document.getElementById('button3');
+            button3.addEventListener('click', function() {
+                window.location.href = 'sms://+18885555512?body=I%27m%20interested%20in%20your%20product.%20Please%20contact%20me.';
+            });
+
+            var button4 = document.getElementById('button4');
+            button4.addEventListener('click', function() {
+                window.location.href = 'sms://+18885555512;body=I%27m%20interested%20in%20your%20product.%20Please%20contact%20me.';
+            });
+
+            var button5 = document.getElementById('button5');
+            button5.addEventListener('click', function() {
+                window.location.href = 'sms://+18885555512&body=I%27m%20interested%20in%20your%20product.%20Please%20contact%20me.';
+            });
+
+            var button6 = document.getElementById('button6');
+            button6.addEventListener('click', function() {
+                window.location.href = 'sms://+18885555512';
+            });
+
+        </script>
+
+    </body>
+</html>
