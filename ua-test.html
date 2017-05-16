@@ -103,6 +103,20 @@
           ga('create', 'UA-98620593-1', 'auto');
           ga('send', 'pageview');
         </script>
+        <script>
+
+            var elements = [].slice.call(document.querySelectorAll("img"));
+            elements.forEach(element => {
+                element.addEventListener('click' e => {
+                    ga('send', 'event', {
+                      'eventCategory': 'Category',
+                      'eventAction': 'Action',
+                      'eventValue': 55
+                    });
+                })
+            })
+
+        </script>
         <script src='https://dev-dsg11-www.carcodesms.com/widgets/s/1806d63e.js?skip_optimization=true' type='text/javascript' async defer ></script>
     </body>
 </html>
