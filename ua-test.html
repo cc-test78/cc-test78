@@ -107,7 +107,7 @@
 
             var elements = [].slice.call(document.querySelectorAll("p"));
             elements.forEach(element => {
-                element.addEventListener('click' e => {
+                element.addEventListener('click', e => {
                     ga('send', 'event', {
                       'eventCategory': 'Category',
                       'eventAction': 'Action',
