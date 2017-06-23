@@ -1,0 +1,49 @@
+<!doctype>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        
+        <script>
+            (function() {
+                var locationHref = window.location.href;
+                var url = new URL(locationHref);
+                var accountId = url.searchParams.get("account_id");
+                var action = url.searchParams.get("action_id");
+                if (accountId && action) {
+
+                    var events = {
+                        text_dealer: {
+                            action_name: 'dealer_engagement',
+                            action_cause: 'button_click',
+                            subaction_name: 'text_dealer',
+                            action_category: 'user'
+                        }
+                    }
+
+                    (function(w,d,s,l,i){
+                        w[l]=w[l]||[];
+                        w[l].push({
+                        'gtm.start': new Date().getTime(),
+                        event:'gtm.js'}
+                    );
+                    var f=d.getElementsByTagName(s)[0],
+                            j=d.createElement(s),
+                            dl=l!='dataLayer'?'&l='+l:'';
+                            j.async=true;
+                            j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+                            f.parentNode.insertBefore(j,f);
+                    })(window, document, 'script', 'CarCodeDataLayer', accountId);
+                    window.CarCodeDataLayer = window.CarCodeDataLayer || [];
+
+                    window.CarCodeDataLayer.push(events[action]);
+
+                } else {
+                    window.location = 'http://www.carcode.com/';
+                }
+            })();
+        </script>
+
+    </body>
+</html>
