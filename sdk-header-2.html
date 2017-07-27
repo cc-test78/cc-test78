@@ -91,17 +91,17 @@
 
         <script>
             (function() {
-                var headerWapper = document.querySelector('.header');
+                var headerWrapper = document.querySelector('.header');
                 var header = document.querySelector('.header-default');
                 if (!headerWrapper || !header) {
                     return;
                 }
                 window.addEventListener('scroll', function() {
                     if (window.scrollY > 0) {
-                        headerWapper.style.height = '50px';
+                        headerWrapper.style.height = '50px';
                         header.style.height = '50px';
                     } else {
-                        headerWapper.style.height = '138px';
+                        headerWrapper.style.height = '138px';
                         header.style.height = '138px';
                     }
                 });
