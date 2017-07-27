@@ -15,6 +15,12 @@
                 background-color: #efefef;
                 box-shadow: 0 5px 5px rgba(0, 0, 0, .15);
             }
+            .header-default {
+                position: relative;
+                width: 1000px;
+                height: 138px;
+                margin: 0 auto;
+            }
             .header .sms-button {
                 width: 150px;
                 height: 60px;
@@ -35,8 +41,8 @@
         </style>
     </head>
     <body>
-        <div class="container-fluid header header-default">
-
+        <div class="container-fluid header">
+            <div class="header-default"></div>
         </div>
         <div class="container-fluid hero">
             <div class="hero__title">
@@ -85,14 +91,17 @@
 
         <script>
             (function() {
+                var headerWapper = document.querySelector('.header');
                 var header = document.querySelector('.header-default');
-                if (!header) {
+                if (!headerWrapper || !header) {
                     return;
                 }
                 window.addEventListener('scroll', function() {
                     if (window.scrollY > 0) {
+                        headerWapper.style.height = '50px';
                         header.style.height = '50px';
                     } else {
+                        headerWapper.style.height = '138px';
                         header.style.height = '138px';
                     }
                 });
