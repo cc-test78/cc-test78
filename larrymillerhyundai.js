@@ -25,6 +25,7 @@
         button.style.position = 'absolute';
         button.style.width = '150px';
         button.style.height = '40px';
+        button.style.margin = '0';
         button.style.padding = '0';
         button.style.borderWidth = '0';
         button.style.borderRadius = '5px';
