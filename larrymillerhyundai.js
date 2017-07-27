@@ -5,6 +5,10 @@
         return;
     }
 
+    if (typeof CarcodeWidget !== 'function') {
+        return;
+    }
+
     function updateButtonPosition(button) {
         if (window.scrollY > 0) {
             button.style.top = '5px';
